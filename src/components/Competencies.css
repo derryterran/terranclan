@@ -1,0 +1,121 @@
+#competencies {
+  padding: 100px 0;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.competency-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+  animation-play-state: paused;
+}
+
+.competency-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in.appear .competency-card {
+  animation-play-state: running;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.competency-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.competency-icon i {
+  font-size: 24px;
+  color: #2563eb;
+}
+
+.competency-card:hover .competency-icon {
+  background-color: #2563eb;
+}
+
+.competency-card:hover .competency-icon i {
+  color: white;
+}
+
+.competency-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.competency-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Dark Theme */
+body.dark-theme .competency-card {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body.dark-theme .competency-icon {
+  background-color: #111827;
+}
+
+body.dark-theme .competency-icon i {
+  color: #3b82f6;
+}
+
+body.dark-theme .competency-card:hover .competency-icon {
+  background-color: #3b82f6;
+}
+
+body.dark-theme .competency-card:hover .competency-icon i {
+  color: #f3f4f6;
+}
+
+body.dark-theme .competency-card h3 {
+  color: #f3f4f6;
+}
+
+body.dark-theme .competency-card p {
+  color: #d1d5db;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .competencies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .competencies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .competency-card {
+    padding: 25px;
+  }
+}

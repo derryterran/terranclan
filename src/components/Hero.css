@@ -1,0 +1,269 @@
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f6f8ff 0%, #e9f0ff 100%);
+  padding-top: 80px;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  position: relative;
+  display: inline-block;
+}
+
+#hero h2 {
+  font-size: 1.5rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Starcraft-inspired Effect */
+.starcraft-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.starcraft-name {
+  position: relative;
+  color: #00c3ff;
+  text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #00c3ff 0%, #0070b0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.starcraft-name::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 195, 255, 0.3) 0%, rgba(0, 112, 176, 0.3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+.starcraft-name.scan-complete::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: flicker 5s infinite;
+  background: linear-gradient(to bottom, rgba(0, 195, 255, 0.5) 0%, rgba(0, 112, 176, 0.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, 
+    rgba(0, 195, 255, 0) 0%, 
+    rgba(0, 195, 255, 0.8) 50%, 
+    rgba(0, 195, 255, 0) 100%);
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.8);
+  z-index: 3;
+  animation: scan 3s infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  55% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  65% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.5;
+  }
+}
+
+/* Cursor animation */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: #00c3ff;
+  margin-left: 2px;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Dark Theme */
+body.dark-theme #hero {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+body.dark-theme #hero h2 {
+  color: #d1d5db;
+}
+
+body.dark-theme .starcraft-name {
+  color: #4aeaff;
+  text-shadow: 0 0 10px rgba(74, 234, 255, 0.6);
+  background: linear-gradient(to bottom, #4aeaff 0%, #0088cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .starcraft-name::before {
+  background: linear-gradient(to bottom, rgba(74, 234, 255, 0.4) 0%, rgba(0, 136, 204, 0.4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .starcraft-name.scan-complete::after {
+  background: linear-gradient(to bottom, rgba(74, 234, 255, 0.6) 0%, rgba(0, 136, 204, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .scan-line {
+  background: linear-gradient(to right, 
+    rgba(74, 234, 255, 0) 0%, 
+    rgba(74, 234, 255, 0.9) 50%, 
+    rgba(74, 234, 255, 0) 100%);
+  box-shadow: 0 0 15px rgba(74, 234, 255, 0.9);
+}
+
+body.dark-theme .cursor {
+  background-color: #4aeaff;
+  box-shadow: 0 0 10px rgba(74, 234, 255, 0.9);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #hero h1 {
+    font-size: 3rem;
+  }
+  
+  #hero h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
