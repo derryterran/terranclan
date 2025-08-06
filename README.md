@@ -1,4 +1,4 @@
-# TerraClan - Derry Liandana Portfolio
+# TerranClan - Derry Liandana Portfolio
 
 A modern, responsive portfolio website built with React.js for Derry Liandana, showcasing his experience as a Principal Engineer, Software Architect, and Integration Expert.
 
