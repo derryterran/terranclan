@@ -37,7 +37,7 @@ const Header = () => {
     <header className={scrolled ? 'scrolled' : ''}>
       <nav>
         <div className="logo">
-          <img src="/dt.png" alt="Derry Liandana" className="logo-image" />
+          <img src="./dt.png" alt="Derry Liandana" className="logo-image" />
         </div>
         <ul className={`nav-links ${isActive ? 'active' : ''}`}>
           <li><a href="#about" onClick={closeNav}>About</a></li>

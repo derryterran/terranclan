@@ -25,7 +25,7 @@ const Experience = () => {
     {
       period: 'Mar 2014 - Aug 2016',
       title: 'System Integration Engineer Lead – Wirecard',
-      description: 'Developed middleware systems connecting PrimeCash with core banking systems and external platforms. Designed reusable integration architectures for high performance. Contributed to projects for CIMB Thailand, Qatar National Bank, Mandiri Bank, and Military Bank of Vietnam.',
+      description: 'Developed middleware systems connecting PrimeCash with core banking systems and external platforms. Designed reusable integration architectures for high performance. Contributed to projects for CIMB Thailand, Qatar National Bank, Mandiri Bank, and Military Bank of Vietnam. Lead and coach all Host Integrator developers across banking projects, with a focus on ISO 8583, HTTP REST, TCP/IP, Axis2 library, and other integrations using PrismaGateway tools.',
       skills: 'Spring, ISO8583, Java Enterprise Edition, PrismaGateway, Spring Boot, Struts, Weblogic, WebSphere Application Server, JBoss EAP'
     },
     {

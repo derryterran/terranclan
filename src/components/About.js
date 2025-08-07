@@ -36,7 +36,7 @@ const About = () => {
           <div className="about-image">
             <div className="image-placeholder">
               <img 
-                src="/dt.png" 
+                src="./dt.png" 
                 alt="Derry Liandana" 
                 className="profile-image"
               />
